@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa!</title>
+    <style> /* Parte do CSS */
+        body { /* comentário na parte CSS */
+            background-color: rgb(153, 153, 228);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {  
+            color: rgb(230, 100, 100)
+        }
+    </style>
+</head> <!-- parte de conteúdo (HTML) -->
+<body> <!-- Assim se comentário no HTML -->
+    <h1>Olá, mundo!</h1> <!-- h1 é título -->
+    <p>Já me livrei da maldição</p> <!-- p é parágrafo -->
+    <script>
+        var nome = window.prompt('Qual é o seu nome?') // vai perguntar o nome
+        // let nome = window.prompt... também funciona
+        // const nome = window.prompt... também funciona 
+        // as diferenças serão explicadas mais adiante
+        // h1 é título
+        // p é parágrafo
+        window.alert('É um grande prazer te conhecer, ' + nome + '!') // o "+" é concatenação (juntar)
+    </script>
+</body>
+</html>
