@@ -5,8 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entendendo o DOM</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando os estudos DOM</h1>
+    <h2>Leia com atenção os comentários no arquivo HTML!</h2>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript. </p>
+    <p>Importante salientar que o <strong>DOM</strong> não roda dentro do <strong>NodeJS</strong>. Apenas no navegador.</p>
+    <div id="msg">clique em mim</div>
+    <br>
+    <div class="teste">Vou criar uma classe e selecioná-la com getElementsByClassName</div>
+    <br>
+    <script>
+        //window.document.write('Olá, mundo!')
+        //window.document.write(window.document.URL)
+        var p1 = window.document.getElementsByTagName('p')[1] //criei uma variável para o parágrafo
+        var p2 = window.document.getElementsByTagName('p')[2]
+        var corpo = window.document.body //criei uma variável para o corpo
+        p1.style.color = 'blue'
+        corpo.style.backgroundColor = 'lightgray'
+        window.document.write(`${p1.innerText}<br>`) // innerText é o texto dentro do parágrafo
+
+        window.document.write(`<br>`)
+
+        window.document.write(`${p2.innerText}<br>`) // Observe na página que o DOM e o NodeJS no parágrafo estão em negrito. Não retornou o texto com o negrito nas duas palavras por causa do comanto innerText. Para retornar o texto como no parágrafo orinigal, utiliza-se o comanto innerHTML. Veja:
+        window.document.write(`<br>`) // linha em branco na página
+
+        window.document.write(p2.innerHTML)
+        //window.alert(p1.innerText)[1]
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá' // mesmo comando anterior, só que maior
+            
+        var e = window.document.wherySelector('div.teste')
+        e.style.background = 'blue'
+
+    </script>
 </body>
 </html>
