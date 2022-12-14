@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detran</title>
 </head>
 <body>
-    
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel')// ligação do JavaScript com a caixa de texto criada acima (txtvel)
+            var vel = window.document.querySelector('div#res')
+            var vel = Number(txtvel.value) // pega o número (valor) que está digitado na caixa de texto e joga dentro da variável vel
+            res.innerHTML = `Sua velocidade atual é de <strong>${vel} km/h</strong>`
+            if (vel > 60) {
+                res.innerHTML += '<p> Você está acima da velocidade permitida. Foi multado!</p>'
+            } else {
+                res.innerHTML += '<p>Dirija sempre com segurança. Tenha um bom dia!!!</p>'
+            }
+        }
+    </script>
 </body>
 </html>
