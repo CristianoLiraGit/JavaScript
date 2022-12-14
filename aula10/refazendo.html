@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px; /*largura*/
+            height: 200px; /*altura*/
+            line-height: 200px; /*deixar o texto no meio (mesma altura em cima e embaixo*/
+            text-align: center;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">Interaja!</div> <!--Criei uma função dentro da tag div-->
+    <script>
+        var a = window.document.getElementById('area')
+        function clicar() { // não esqueça de chamar a função criada acima na div
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+            
+        }
+        function entrar() {
+            a.innerText = 'Entrou'
+        }
+        function saiu() {
+            a.innerText = 'Saiu'
+            a.style.background = 'green'
+        }
+    </script>
+    <ul>
+        <li><strong>mouseenter</strong> → quando o mouse entra na div</li>
+        <li><strong>mousemove</strong> →  mouse se moveu dentro da div</li>
+        <li><strong>mousedown</strong> → clica e segura o mouse dentro da div dispara este método</li>
+        <li><strong>mouseup</strong> → no momento em que soltar o botão do mouse, dispara este método</li>
+        <li><strong>click</strong> → evento inteiro de clicar e soltar logo o mouse</li>
+        <li><strong>mouseout</strong> → quando o ponteiro do mouse sai de dentro da div</li>
+    </ul>
+
+</body>
+</html>
